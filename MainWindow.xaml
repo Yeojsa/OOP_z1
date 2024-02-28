@@ -1,0 +1,38 @@
+﻿<Window x:Class="OOP_z1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_z1"
+        mc:Ignorable="d"
+           Title="ClassHero" Height="260" Width="400" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Здоровье:" FontSize="15" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="healthTextBox" PreviewTextInput="Box_PreviewTextInput" FontSize="15" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Урон:" FontSize="15" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="damageTextBox" FontSize="15" PreviewTextInput="Box_PreviewTextInput" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Броня:" FontSize="15" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="armorTextBox" FontSize="15" PreviewTextInput="Box_PreviewTextInput" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Шанс уворота (%):"  FontSize="15" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="evasionTextBox" FontSize="15" PreviewTextInput="Box_PreviewTextInput" VerticalAlignment="Center"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Создать персонажа"  FontSize="15" HorizontalAlignment="Center" x:Name="Createbutton" Click="Createbutton_Click"/>
+        <Button Grid.Row="5"  Content="Сражение"  FontSize="15" HorizontalAlignment="Center" Click="Randomcreatebutton_Click" Margin="0 5 0 0" x:Name="Randomcreatebutton"  Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
